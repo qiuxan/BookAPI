@@ -1,7 +1,8 @@
 <h1>Book List</h1>
-<p>
-    Id: {{book.id}}<br>
-    Title: {{book.title}}<br>
-    Author: {{book.author}}<br>
-
-</p>
+<ul>
+    <li *ngFor="let book of books">
+        <h3>{{book.title}}</h3>
+        <p>ID: {{book.id}}</p>
+        <p>Author: {{book.author}}</p>
+    </li>
+</ul>
