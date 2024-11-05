@@ -11,7 +11,11 @@ public class Program
         var app = builder.Build();
 
         app.MapControllers();
-        app.MapGet("/", () => "Hello World!");
+        app.MapGet("/", () =>
+        {
+            return Results.Redirect("/api/books");
+
+        });
 
         app.Run();
     }
